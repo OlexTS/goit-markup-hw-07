@@ -310,16 +310,25 @@ img {
 
 /* About section */
 
-.about-list {
+.about__title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-dark-txt-clr);
+}
+
+.about__list {
   display: flex;
   gap: 30px;
 }
 
-.about-item {
+.about__item {
   position: relative;
 }
 
-.about-title,
 .team-title,
 .clients-title {
   margin-bottom: 50px;
@@ -331,7 +340,7 @@ img {
   color: var(--secondary-dark-txt-clr);
 }
 
-.label {
+.about__label {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -343,7 +352,7 @@ img {
   background: rgba(47, 48, 58, 0.8);
 }
 
-.label-text {
+.about__text {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
