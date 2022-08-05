@@ -82,12 +82,16 @@ img {
 }
 
 /* Header section */
-.header-container {
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header__container {
   display: flex;
   align-items: center;
 }
 
-.logo {
+.header__logo {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
@@ -97,35 +101,20 @@ img {
   color: var(--accent-txt-color);
 }
 
-.header-logo {
+.header__logo-clr {
   color: var(--logo-txt-clr);
 }
 
-.header-nav {
-  margin-right: auto;
-  margin-left: 93px;
-}
-
-.header-list {
-  display: flex;
-  gap: 50px;
-}
-
-.header-item {
-  position: relative;
-}
-
-.header-contacts {
+.header__list {
   display: flex;
 }
 
-.header-mail {
+.header__item-mail {
   margin-right: 50px;
 }
 
-.header-link,
-.mail-link,
-.phone-link {
+.header__link,
+.header__link {
   padding-top: 32px;
   padding-bottom: 32px;
   display: block;
@@ -137,19 +126,62 @@ img {
   transition: color var(--animation-fast);
 }
 
-.header-link:hover,
-.header-link:focus {
+.header__link {
+  color: inherit;
+  display: flex;
+  align-items: center;
+  transition: color var(--animation-fast);
+}
+
+.header__link:hover,
+.header__link:focus {
   color: var(--accent-txt-color);
 }
 
-.header-link-current {
+.header__icon {
+  fill: currentColor;
+  margin-right: 10px;
+  justify-content: center;
+}
+
+.header__nav {
+  margin-right: auto;
+  margin-left: 93px;
+}
+
+.nav__list {
+  display: flex;
+  gap: 50px;
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--secondary-dark-txt-clr);
+  transition: color var(--animation-fast);
+}
+
+.nav__link:hover,
+.nav__link:focus {
   color: var(--accent-txt-color);
 }
 
-.header-link-current::after {
+.nav__link--current {
+  color: var(--accent-txt-color);
+}
+
+.nav__link--current::after {
   position: absolute;
   z-index: 100;
-
   content: '';
   left: 0;
   bottom: -1px;
@@ -157,34 +189,6 @@ img {
   height: 4px;
   background: var(--accent-txt-color);
   border-radius: 2px;
-}
-
-.mail-link,
-.phone-link {
-  color: inherit;
-  display: flex;
-  align-items: center;
-  transition: color var(--animation-fast);
-}
-
-.mail-link:hover,
-.mail-link:focus {
-  color: var(--accent-txt-color);
-}
-
-.phone-link:hover,
-.phone-link:focus {
-  color: var(--accent-txt-color);
-}
-
-.contact-icon {
-  fill: currentColor;
-  margin-right: 10px;
-  justify-content: center;
-}
-
-.header {
-  border-bottom: 1px solid #ececec;
 }
 
 /* hero section */
