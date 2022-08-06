@@ -192,17 +192,15 @@ img {
 }
 
 /* hero section */
-.hero {
-  background: var(--dark-bg-clr);
-}
 
-.hero {
+.main__hero {
   padding-top: 200px;
   padding-bottom: 200px;
   max-width: 1600px;
   height: 600px;
   margin-left: auto;
   margin-right: auto;
+  background: var(--dark-bg-clr);
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero.jpg);
   background-repeat: no-repeat;
@@ -210,7 +208,7 @@ img {
   background-size: cover;
 }
 
-.hero-title {
+.hero__title {
   max-width: 696px;
   margin: 0 auto;
   margin-bottom: 30px;
@@ -223,16 +221,8 @@ img {
   color: var(--secondary-light-txt-clr);
 }
 
-.hero-btn,
-.portfolio-btn,
-.form-btn,
-.footer-form-button {
+.hero__btn {
   font-family: inherit;
-  cursor: pointer;
-  border: none;
-}
-
-.hero-btn {
   margin: 0 auto;
   display: block;
   min-width: 200px;
@@ -244,12 +234,14 @@ img {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  cursor: pointer;
+  border: none;
   color: var(--light-bg-clr);
   transition: background-color var(--animation-fast);
 }
 
-.hero-btn:hover,
-.hero-btn:focus {
+.hero__btn:hover,
+.hero__btn:focus {
   color: var(--secondary-light-txt-clr);
   background-color: var(--hover-btn-clt);
 }
@@ -258,10 +250,6 @@ img {
 
 .benefits {
   padding-bottom: 0;
-}
-
-.benefits__container {
-  align-items: center;
 }
 
 .benefits__logo-list {
@@ -329,17 +317,6 @@ img {
   position: relative;
 }
 
-.team-title,
-.clients-title {
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--secondary-dark-txt-clr);
-}
-
 .about__label {
   display: flex;
   align-items: center;
@@ -367,7 +344,17 @@ img {
   background: var(--light-bg-clr);
 }
 
-.team-list {
+.team__title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-dark-txt-clr);
+}
+
+.team__list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -375,7 +362,7 @@ img {
 /* .team-list {
   flex-basis: calc((100% - 30px * 3) / 4);
 } */
-.team-card {
+.team__card {
   padding: 30px 5px 30px 5px;
   border-radius: 0px 0px 4px 4px;
   background: #ffffff;
@@ -383,7 +370,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.employee-title {
+.card-team__title {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -393,7 +380,7 @@ img {
   color: var(--secondary-dark-txt-clr);
 }
 
-.team-text {
+.card-team__text {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -401,14 +388,14 @@ img {
   margin-bottom: 16px;
 }
 
-.social-list {
+.card-team__list {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
 
-.social-link {
+.card-team__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -420,34 +407,43 @@ img {
   transition: background-color var(--animation-fast);
 }
 
-.social-icon {
+.card-team__icon {
   fill: #afb1b8;
   transition: fill var(--animation-fast);
 }
 
-.social-link:hover,
-.social-link:focus {
+.card-team__link:hover,
+.card-team__link:focus {
   background-color: #2196f3;
 }
 
-.social-link:hover .social-icon {
+.card-team__link:hover .card-team__icon {
   fill: #ffffff;
 }
 
-.social-link:focus .social-icon {
+.card-team__link:focus .card-team__icon {
   fill: #ffffff;
 }
 
 /* Clients section */
 
-.clients-list {
+.clients__title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--secondary-dark-txt-clr);
+}
+.clients__list {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
 }
 
-.clients-link {
+.clients__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -458,20 +454,20 @@ img {
   transition: border var(--animation-fast);
 }
 
-.clients-link:hover,
-.clients-link:focus {
+.clients__link:hover,
+.clients__link:focus {
   border: 1px solid #2196f3;
 }
 
-.clients-link:hover .clients-icon {
+.clients__link:hover .clients__icon {
   fill: #2196f3;
 }
 
-.clients-link:focus .clients-icon {
+.clients__link:focus .clients__icon {
   fill: #2196f3;
 }
 
-.clients-icon {
+.clients__icon {
   fill: #afb1b8;
   transition: fill var(--animation-fast);
 }
@@ -638,35 +634,38 @@ img {
 
 /* Portfolio page */
 
-.btn-list {
+.btn__list {
   display: flex;
   gap: 8px;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.portfolio-btn {
+.portfolio__btn {
+  font-family: inherit;
   padding: 6px 22px;
   border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
   letter-spacing: 0.03em;
+  cursor: pointer;
+  border: none;
   color: var(--secondary-dark-txt-clr);
   background-color: var(--light-bg-clr);
   transition: background-color var(--animation-fast), color var(--animation-fast),
     box-shadow var(--animation-fast);
 }
 
-.portfolio-btn:hover,
-.portfolio-btn:focus {
+.portfolio__btn:hover,
+.portfolio__btn:focus {
   background-color: var(--accent-txt-color);
   color: var(--secondary-light-txt-clr);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.portfolio-list {
+.portfolio__list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -683,11 +682,11 @@ img {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.work-item {
+.portfolio__item {
   flex-basis: calc((100% - 30px * 2) / 3);
 }
 
-.portfolio-title {
+.portfolio__title {
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
@@ -696,13 +695,13 @@ img {
   color: var(--secondary-dark-txt-clr);
 }
 
-.portfolio-text {
+.portfolio__text {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
 }
 
-.potfolio-border {
+.potfolio__border {
   padding: 20px 24px 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
@@ -710,12 +709,12 @@ img {
 
 /* Overlay */
 
-.card-box {
+.portfolio__card-box {
   position: relative;
   overflow: hidden;
 }
 
-.overlay {
+.card-box__overlay {
   position: absolute;
   left: 0;
   top: 0;
@@ -727,7 +726,7 @@ img {
   transition: transform var(--animation-fast);
 }
 
-.overlay-text {
+.overlay__text {
   text-align: left;
   font-size: 18px;
   line-height: 1.56;
@@ -735,11 +734,11 @@ img {
   color: var(--secondary-light-txt-clr);
 }
 
-.portfolio-link:hover .overlay {
+.portfolio__link:hover .overlay {
   transform: translateY(0);
 }
 
-.portfolio-link:focus .overlay {
+.portfolio__link:focus .overlay {
   transform: translateY(0);
 }
 
@@ -761,13 +760,13 @@ img {
   transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden {
+.backdrop--is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
+.backdrop--is-hidden .modal {
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.3);
 }
@@ -788,7 +787,7 @@ img {
     opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-btn {
+.modal__btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -805,8 +804,8 @@ img {
   transition: fill var(--animation-fast);
 }
 
-.modal-btn:hover,
-.modal-btn:focus {
+.modal__btn:hover,
+.modal__btn:focus {
   fill: #2196f3;
 }
 
@@ -816,7 +815,7 @@ img {
   padding: 40px;
 }
 
-.form-title {
+.form__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -827,21 +826,21 @@ img {
   display: block;
 }
 
-.form-group {
+.form__group {
   margin-bottom: 20px;
 }
 
-.form-label {
+.form__label {
   position: relative;
   display: block;
   margin-bottom: 10px;
 }
 
-.form-label:last-child {
+.form__label:last-child {
   margin-bottom: 0;
 }
 
-.form-text {
+.form__text {
   display: block;
   margin-bottom: 4px;
   font-size: 12px;
@@ -849,7 +848,7 @@ img {
   letter-spacing: 0.01em;
 }
 
-.form-input {
+.form__input {
   width: 100%;
   height: 40px;
   padding: 11px 12px 11px 40px;
@@ -860,24 +859,24 @@ img {
   transition: border var(--animation-fast);
 }
 
-.form-input:hover,
-.form-input:focus {
+.form__input:hover,
+.form__input:focus {
   border: 1px solid var(--accent-txt-color);
 }
 
-.form-input:hover + .form-icon,
-.form-input:focus + .form-icon {
+.form__input:hover + .form__icon,
+.form__input:focus + .form__icon {
   fill: var(--accent-txt-color);
 }
 
-.form-icon {
+.form__icon {
   position: absolute;
   bottom: 11px;
   left: 12px;
   transition: fill var(--animation-fast);
 }
 
-.form-message {
+.form__message {
   width: 100%;
   height: 120px;
   font-size: 12px;
@@ -893,19 +892,19 @@ img {
   cursor: pointer;
 }
 
-.form-message:hover,
-.form-message:focus {
+.form__message:hover,
+.form__message:focus {
   border: 1px solid var(--accent-txt-color);
 }
 
-.form-agreement {
+.form__agreement {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
 }
 
-.register-agreement-text {
+.agreement__text {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -914,7 +913,7 @@ img {
   text-underline-position: under;
 }
 
-.register-agreement-link {
+.agreement__link {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -922,35 +921,36 @@ img {
   color: var(--accent-txt-color);
 }
 
-.register-icon {
+.agreement__icon {
   transition: border var(--animation-fast), fill var(--animation-fast);
   cursor: pointer;
 }
 
-.register-checkbox:hover + .register-icon,
-.register-checkbox:focus + .register-icon {
+.agreement__checkbox:hover + .agreement__icon,
+.agreement__checkbox:focus + .agreement__icon {
   fill: var(--accent-txt-color);
   /* border: 1px solid var(--accent-txt-color); */
 }
 
-.register-icon-check {
+.register__icon--check {
   opacity: 0;
   transition: opacity var(--animation-fast);
 }
 
-.register-icon-uncheck {
+.register__icon--uncheck {
   transition: opacity var(--animation-fast);
 }
 
-.register-checkbox:checked + .register-icon .register-icon-uncheck {
+.agreement__checkbox:checked + .agreement__icon .register__icon--uncheck {
   opacity: 0;
 }
 
-.register-checkbox:checked + .register-icon .register-icon-check {
+.agreement__checkbox:checked + .agreement__icon .register__icon--check {
   opacity: 1;
 }
 
-.form-btn {
+.form__btn {
+  font-family: inherit;
   margin: 0 auto;
   display: block;
   width: 200px;
@@ -961,6 +961,8 @@ img {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  cursor: pointer;
+  border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: var(--accent-txt-color);
