@@ -193,7 +193,7 @@ img {
 
 /* hero section */
 
-.main__hero {
+/* .main__hero {
   padding-top: 200px;
   padding-bottom: 200px;
   max-width: 1600px;
@@ -219,9 +219,9 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--secondary-light-txt-clr);
-}
+} */
 
-.hero__btn {
+/* .hero__btn {
   font-family: inherit;
   margin: 0 auto;
   display: block;
@@ -230,6 +230,7 @@ img {
   padding: 10px 32px;
   border-radius: 4px;
   background-color: var(--accent-txt-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -244,7 +245,7 @@ img {
 .hero__btn:focus {
   color: var(--secondary-light-txt-clr);
   background-color: var(--hover-btn-clt);
-}
+} */
 
 /* Benefits section */
 
@@ -298,7 +299,9 @@ img {
 
 /* About section */
 
-.about__title {
+/* .about__title,
+.team__title,
+.clients__title {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -306,9 +309,9 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--secondary-dark-txt-clr);
-}
+} */
 
-.about__list {
+/* .about__list {
   display: flex;
   gap: 30px;
 }
@@ -336,22 +339,12 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-light-txt-clr);
-}
+} */
 
 /* Team section */
 
-.team {
+/* .team {
   background: var(--light-bg-clr);
-}
-
-.team__title {
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--secondary-dark-txt-clr);
 }
 
 .team__list {
@@ -359,9 +352,7 @@ img {
   flex-wrap: wrap;
   gap: 30px;
 }
-/* .team-list {
-  flex-basis: calc((100% - 30px * 3) / 4);
-} */
+
 .team__card {
   padding: 30px 5px 30px 5px;
   border-radius: 0px 0px 4px 4px;
@@ -423,19 +414,10 @@ img {
 
 .card-team__link:focus .card-team__icon {
   fill: #ffffff;
-}
+} */
 
 /* Clients section */
 
-.clients__title {
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--secondary-dark-txt-clr);
-}
 .clients__list {
   display: flex;
   align-items: center;
@@ -614,7 +596,7 @@ img {
   outline: transparent;
 }
 
-.subscription-form__button {
+/* .subscription-form__button {
   display: inline-flex;
   align-items: center;
   gap: 12px;
@@ -630,7 +612,13 @@ img {
   border-radius: 4px;
   border: none;
   cursor: pointer;
+  transition: background-color var(--animation-fast);
 }
+
+.subscription-form__button:hover,
+.subscription-form__button:focus {
+  background-color: var(--hover-btn-clt);
+} */
 
 /* Portfolio page */
 
@@ -949,14 +937,14 @@ img {
   opacity: 1;
 }
 
-.form__btn {
+/* .form__btn {
   font-family: inherit;
   margin: 0 auto;
   display: block;
   width: 200px;
   height: 50px;
   padding: 10px 32px;
-  color: var(--secondary-light-txt-clr);
+  background-color: var(--accent-txt-color);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -965,6 +953,12 @@ img {
   border: none;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  background-color: var(--accent-txt-color);
+  color: var(--secondary-light-txt-clr);
   user-select: none;
+  transition: background-color var(--animation-fast);
 }
+
+.form__btn:hover,
+.form__btn:focus {
+  background-color: var(--hover-btn-clt);
+} */

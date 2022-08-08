@@ -3,7 +3,6 @@
 @import './utils/visually-hidden';
 @import './utils/placeholders';
 
-
 // base styles
 @import './base/base';
 @import './base/reset';
@@ -11,7 +10,14 @@
 // components styles
 @import './components/section';
 @import './components/container';
+@import './components/titles';
+@import './components/buttons';
 
 // layout styles
 @import './layout/header';
 @import './layout/nav';
+@import './layout/hero';
+@import './layout/benefits';
+@import './layout/about';
+@import './layout/team';
+@import './layout/clients';
