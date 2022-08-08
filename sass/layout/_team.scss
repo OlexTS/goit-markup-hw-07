@@ -45,6 +45,7 @@
 }
 
 .card-team__link {
+  @extend %reset-link;
   display: flex;
   align-items: center;
   justify-content: center;
